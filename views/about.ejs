@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<head>
+
+<style>
+
+*{padding: 0%;
+margin: 0%;
+}
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+@keyframes flot {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	0% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+@keyframes flat {
+	0% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(+120px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+
+body{background-image: url("about/back/mon.JPG");
+background-size: cover;
+
+}
+.up{
+
+  text-align: center;
+  margin-top:4%;
+  color:black;
+  width:auto;
+  font-size: 300%;
+  text-decoration: underline;
+}
+header{
+  z-index: 10;
+
+}
+.ico{
+  color:white;
+  padding-left:2%;
+font-size: 80%;
+font-family:lobster;
+}
+//*{z-index:0;
+position: fixed;}*/
+.hi{
+
+  overflow: hidden !important;
+height: 2% !important;}
+.slidesjs-container{
+height: 2% !important;
+overflow: hidden !important;
+}
+  .navbar {
+    overflow: hidden
+  }
+
+</style>
+<!-- End SlidesJS Optional-->
+
+<!-- SlidesJS Required: These styles are required if you'd like a responsive slideshow -->
+<style>
+
+  .container {
+    margin: 0 0;
+    padding: 0 20% 0 20%;
+
+  }
+
+  /* For tablets & smart phones */
+  @media (max-width: 767px) {
+    body{background-image: url("about/back/mob.JPG");
+  background-size: cover;}
+  .container{padding: 0 0;
+}
+  }
+
+  /* For smartphones */
+  @media (max-width: 480px) {
+    body{background-image: url("about/back/mob.JPG");
+  background-size: cover;}
+  .container{padding: 0 0;
+}
+  }
+
+  /* For smaller displays like laptops */
+  @media (min-width: 768px) and (max-width: 979px) {
+    .container{padding: 0 0;
+ }
+      body{background-image: url("about/back/mob.JPG");
+    background-size: cover;}
+  }
+
+  /* For larger displays */
+  @media (min-width: 1200px) {  }
+
+</style>
+<style>
+body {margin:0;}
+
+.topnav {
+
+  overflow: hidden;
+  background-color: #333;
+
+}
+
+.topnav a {
+  float: right;
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 4px 6px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a {display: none;}
+  .ori a {display:inline-flex; }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .ori a {display:inline-flex; }
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+}
+.ori{display: inline-flex;
+color:white;}
+</style>
+</head>
+<header>
+  <div class="topnav" id="myTopnav">
+    <div class="ori"><div style="color:white;font-family:lobster;"><a href="/">Pixel Dust</a></div>
+</div>
+    <a href="/">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+
+</header>
+<body>
+<div class="vac"></div>
+
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+
+<div class="up" style="top:0;possition:fixed;box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);  animation: float 3s ease-in-out;">
+  About Us
+
+</div>
+<style>
+.container{
+
+}
+.big{
+
+	  animation: flat 3s ease-in-out ;
+	margin-top: 5%;
+width:85%;
+border-bottom-right-radius: 50px;
+ border-bottom-left-radius: 50px;
+
+box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+  display: inline-flex;}
+  .tt{width: 75%;
+text-align:justify;
+  }
+  .oo{
+background-color: rgba(0,0,0,0.5);
+    padding: 4px;
+    width:50px;height:50px;border-radius:50%;
+    animation: float 6s ease-in-out infinite;
+  }
+
+</style>
+
+<div class="container">
+<div class="big animated flipInX"><img class="oo paul"  src="about/paul.png">
+<div class="tt" style=" margin-left:2%;"> <strong>Paul .Se::</strong><br> Founder|Photographer|specialization:All (mostly in Fashion and wedding)|<br>
+  The most precious moments you <strong class="ho1">read more..</strong><p class="on1"style="display:none;">cherish, last for just fraction of seconds. I crave to capture them for you.
+</pr>
+</div></div>
+
+<div class="big animated flipInX" style="float:right;">
+<div class="tt" style=" margin-left:9%;"> <strong>Kangkan-Goswami::</strong><br>Co.founder|Photographer-editor|specialization:Editing|<br>
+  Photography is my passion and <strong class="ho2">read more..</strong><p class="on2"style="display:none;">framing moments is my hobby. I'm doing photography since past 3 years and I believe I'm pretty good at this.
+</pr></div>
+<img class="oo kan" src="about/kan.JPG">
+</div>
+
+<div class="big animated flipInX"><img class="oo neo"  src="about/neo.JPG">
+<div class="tt" style=" margin-left:2%;"> <strong>Akash Neog::</strong><br>Co.Founder|Photographer|Editor|<br>specialization:Wedding|<br>
+  Photography is my hobby and I love <strong class="ho3">read more..</strong><p class="on3"style="display:none;">capturing the perfect moments. I've been successful in holding some moments from past 2 years. I believe a click at a perfect time can hold some beautiful memories from the past..
+</pr>
+</div></div>
+
+<div class="big animated flipInX" style="float:right;">
+<div class="tt" style=" margin-left:9%;"> <strong>Tanveer Afridi::</strong><br>Co.founder|Photographer-editor|specialization:Feature and Fashion|<br>
+  Photography is my hobby and <strong class="ho4">read more..</strong><p class="on4"style="display:none;">my passion.  I have been doing photography from the last 10 months. I love to capture the beauty of the nature and every lovely moments in my camera.
+</pr></div>
+<img class="oo tan" src="about/tan.JPG">
+</div>
+
+</div>
+
+
+<script>
+  $(document).ready(function functionName() {
+$(".up").addClass('animated bounceInDown');
+$(".big").addClass('animated flipInX');
+    $(".ho1").click(function(){
+    $(".ho1").css("display", "none");
+    $(".on1").css("display", "block");
+    $(".on1").css("color", "white");
+  });
+
+      $(".ho2").click(function(){
+      $(".ho2").css("display", "none");
+      $(".on2").css("display", "block");
+      $(".on2").css("color", "white");
+    });
+    $(".ho3").click(function(){
+    $(".ho3").css("display", "none");
+    $(".on3").css("display", "block");
+    $(".on3").css("color", "white");
+  });
+
+  $(".ho4").click(function(){
+  $(".ho4").css("display", "none");
+  $(".on4").css("display", "block");
+  $(".on4").css("color", "white");
+});
+
+          var x=1;
+    $(".kan").click(function(){
+			$(".up").addClass('animated bounceInDown');
+			$(".big").addClass('animated flipInX');
+
+      if(x==1){
+    $(".kan").css("width", "100px");
+    $(".kan").css("height", "100px");
+x=0;
+  }
+else{
+    $(".kan").css("width", "50px");
+    $(".kan").css("height", "50px");
+x=1;}
+});
+$(".paul").click(function(){
+
+  if(x==1){
+$(".paul").css("width", "100px");
+$(".paul").css("height", "100px");
+x=0;
+}
+else{
+$(".paul").css("width", "50px");
+$(".paul").css("height", "50px");
+x=1;}
+});
+
+$(".neo").click(function(){
+
+  if(x==1){
+$(".neo").css("width", "100px");
+$(".neo").css("height", "100px");
+x=0;
+}
+else{
+$(".neo").css("width", "50px");
+$(".neo").css("height", "50px");
+x=1;}
+});
+
+$(".tan").click(function(){
+
+if(x==1){
+$(".tan").css("width", "100px");
+$(".tan").css("height", "100px");
+x=0;
+}
+else{
+$(".tan").css("width", "50px");
+$(".tan").css("height", "50px");
+x=1;}
+});
+
+  });
+</script>
+
+<style>
+</style>
+
+<style>
+/*{z-index:0;}*/
+</style>
+</body>
+</html>
